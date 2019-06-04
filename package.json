@@ -3,12 +3,43 @@
   "version": "1.0.0",
   "description": "A package containing a simple dummy book API, which should be used in the challenge",
   "scripts": {
-    "start": "json-server --port 3010 --watch api.json"
+    "start": "json-server --port 3010 --watch api.json",
+    "dev": "webpack-dev-server --config ./webpack.config.js --mode development --open"
   },
-  "keywords": ["react challenge", "tryouts", "react developer", "hiring"],
+  "keywords": [
+    "react challenge",
+    "tryouts",
+    "react developer",
+    "hiring"
+  ],
   "author": "Adapt A/S",
   "license": "ISC",
   "devDependencies": {
-    "json-server": "0.10.1"
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^2.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "json-server": "0.10.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.5.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "prop-types": "^15.7.2",
+    "ramda": "^0.26.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.3",
+    "reactstrap": "^8.0.0",
+    "redux": "^4.0.1",
+    "redux-actions": "^2.6.5",
+    "redux-observable": "^1.1.0",
+    "rxjs": "^6.5.2",
+    "styled-components": "^4.2.1"
   }
 }
