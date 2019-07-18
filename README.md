@@ -1,3 +1,21 @@
+#INSTRUCTIONS TO RUN THE APPLICATION (VINAY)
+I have integrated a react application in the same projet folder. 
+1. "npm install" to install all react and redux dependencies.
+2. "npm run startServer" to start the json server in watch mode
+3. "npm run start" to start the react application in the browser
+##Brief
+1. Initially the subjects dropdown menu will be populated. 
+2. Once the subject is selected, corresponding books list gets populated in the books dropdown
+3. Once the book is selected, all corresponding information is populated in a form.
+4. All fields except the id are editable
+5. I have used multiple reducers just for demonstration purpose of using combine reducers
+6. Redux thunk is used as a middleware
+7. For each selections and for each charecter change in edit box, the action is dispatched and the redux store gets updated. 
+8. Once the save button is clicked, all the edited information gets saved to the api.json file using put method
+9. To keep the form shorter I have excluded the formats tag which is having too many text.
+
+
+
 # uptain React Coding Challenge
 
 Seems like you're trying out for a position at

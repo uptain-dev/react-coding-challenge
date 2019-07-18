@@ -1,0 +1,70 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.App {
+  text-align: center;
+}
+
+.title{
+  color: #007eff;
+  margin: 1.2rem 0 0 0;
+}
+
+.content-container {
+  margin: 0 auto;
+  padding: 0 1.6rem;
+  max-width: 80rem; 
+}
+
+@media (min-width: 45rem) {
+  .content-container{
+    padding: 0 5rem;
+  }
+}
+
+.text-input {
+  border: 1px solid #007eff;
+  border-radius: 5px;
+  width: 100%;
+  margin: 20px auto 10px auto;
+  padding: 20px 0 20px 10px;
+  font-size: 1.5rem;
+  color: darkslategray;
+}
+
+.select {
+  border: 1px solid #007eff;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 300;
+  width: 100%;
+  margin-top: 1.2rem;
+  background-color: white;
+  height: 3.0rem;
+}
+
+.select *
+{
+  border-radius:15px;
+  width: 10%;
+}
+
+.button {
+  background: #007eff;
+  border: none;
+  color: white;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1;
+  padding: 0.7rem 5rem;
+  text-decoration: none;
+}
+
+.smallMarginBottom{
+  margin-bottom: 1.2rem;
+}
+

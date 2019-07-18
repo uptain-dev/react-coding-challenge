@@ -2,13 +2,42 @@
   "name": "react-coding-challenge",
   "version": "1.0.0",
   "description": "A package containing a simple dummy book API, which should be used in the challenge",
-  "scripts": {
-    "start": "json-server --port 3010 --watch api.json"
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "react-scripts": "3.0.1",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0"
   },
-  "keywords": ["react challenge", "tryouts", "react developer", "hiring"],
+  "scripts": {
+    "startServer": "json-server --port 3010 --watch api.json",
+    "start": "react-scripts start"
+  },
+  "keywords": [
+    "react challenge",
+    "tryouts",
+    "react developer",
+    "hiring"
+  ],
   "author": "Adapt A/S",
   "license": "ISC",
   "devDependencies": {
     "json-server": "0.10.1"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
