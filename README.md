@@ -1,8 +1,9 @@
 
 
-### 'How to setup the project'
+## `How to setup the project`
 
-### `npm install'
+
+### `npm install`
 
 ### `npm run startServer`
 
