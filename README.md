@@ -1,65 +1,68 @@
-# uptain React Coding Challenge
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Seems like you're trying out for a position at
-[Uptain](https://uptain.de) or you've found this and would like to
-apply.  Fork this repo and go at it ;)
+## Available Scripts
 
-Your goal is to set up a React application, where users will be able to
-edit book info (and create new books, if you have enough time to
-implement it). Once you are done with the challenge, please fire up a
-Pull Request and we will get in touch.
+In the project directory, you can run:
 
-## Brief
+### `npm start`
 
-I am a user of the app and I want to create a book object and edit
-previously provided info about it, so that my reading list can stay up
-to date. The form should be split into three steps:
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-1.  Choose subject (one of the two).
-2.  Depending on the selection in the first step, display a list of
-    reading material. Choose one.
-3.  When reading material chosen, display all the info that's available
-    about the book in a form (meaning that the book info can be edited).
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
 
-## Requirements
+### `npm test`
 
-*   All steps should be visible on the screen and changable at all times
-    (when they are available -- step 1 when nothing is picked, step 1
-    and 2 when step 1 is picked and step 1, 2 and 3 when step 2 is
-    picked).
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-*   You can use whatever libraries, task runners and build processes you
-    like. React and plain JavaScript are the only requirements (ES6
-    encouraged, but no TypeScript, CoffeeScript, etc). Redux is strongly
-    encouraged if you see a need for it.
+### `npm run build`
 
-### Suggested order of completion
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-This depends on how much time you were given to accomplish the task.
-Ideally you would provide a solution for each of the outlined steps
-unless they are marked as optional.
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
 
-1.  Data fetching from the api.
-2.  Form steps logic.
-3.  (optional) Saving the data.
-4.  (optional) Styling (minor for a 2-3 h challenge, more if there's more time).
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## API Usage
+### `npm run eject`
 
-API can be launched using `npm start`. You will need to run `npm
-install` once starting working on the project to install dependencies.
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-| Endpoint                     | Result                                              |
-|------------------------------|-----------------------------------------------------|
-| /books?subjects_like=Fiction | Lists all books that contain "Fiction" as a subject |
-| /subjects                    | Lists all available subjects                        |
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
----
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-More info about API usage can be found at the [json-server
-repo](https://github.com/typicode/json-server).
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Credits
+## Learn More
 
-This repo was originally forked from the [Adapt](https://adapt.dk/en) repo here - https://github.com/adaptdk/react-coding-challenge 
-All credits are going out to them! Thanks guys!
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
