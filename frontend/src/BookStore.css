@@ -1,0 +1,15 @@
+#bookstore {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: auto;
+}
+
+#subject {
+    text-align: center;
+}
+
+#booklist {
+    margin-bottom: 10px;
+}
+

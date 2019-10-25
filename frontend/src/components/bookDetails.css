@@ -1,0 +1,16 @@
+#authors {
+    margin-bottom: 10px;
+}
+
+#bookFormSubmit {
+    margin-top: 10px;
+}
+
+.formRow {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.formRow input, .formRow label {
+    width: 50%;
+}
