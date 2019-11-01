@@ -1,0 +1,19 @@
+.page-title {
+  text-align: center;
+}
+
+.form {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.option-menu {  
+  max-width: 30%;
+}
+
+.book {  
+  width: 90%;
+  margin: auto;
+  margin-bottom: 20px;
+}
