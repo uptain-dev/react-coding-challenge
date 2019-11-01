@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import BookUpdateForm from './BookUpdateForm';
 import './Books.css';
 
 class Books extends Component {
@@ -60,6 +61,9 @@ class Books extends Component {
                 )}
             </select>
           </form>
+
+          <BookUpdateForm book={this.state.book[0]} />
+
         </div>
       )
     }
