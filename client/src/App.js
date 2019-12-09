@@ -7,6 +7,8 @@ import Subjects from "./components/Subjects";
 import Books from "./components/Books";
 import BookDetails from "./components/BookDetails";
 
+import "./assets/stylesheet/app.scss";
+
 export default class App extends Component {
   render() {
     return (

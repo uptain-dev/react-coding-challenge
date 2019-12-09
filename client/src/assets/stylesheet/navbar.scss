@@ -1,0 +1,21 @@
+@import "./variables.scss";
+
+.navbar {
+  min-height: $navbar;
+  background-color: $teal-dark;
+
+  @extend .navbar-text;
+
+  &-text {
+    color: $white;
+  }
+
+  a {
+    @extend .navbar-text;
+    font-weight: 600;
+
+    &:hover {
+      @extend a;
+    }
+  }
+}

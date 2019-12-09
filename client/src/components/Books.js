@@ -68,8 +68,7 @@ export default class Books extends Component {
                             to={{
                               pathname: `/books/${book.id}`,
                               state: {
-                                backUrl: `${this.props.match.params.subjectId}`,
-                                bookInfo: { book }
+                                backUrl: `${this.props.match.params.subjectId}`
                               }
                             }}
                           >

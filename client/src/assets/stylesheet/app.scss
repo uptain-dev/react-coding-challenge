@@ -1,0 +1,38 @@
+@import "./variables.scss";
+
+body {
+  color: $near-black;
+}
+
+a {
+  color: $teal-dark;
+
+  &:hover {
+    @extend a;
+  }
+}
+
+.btn {
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: $teal-dark;
+
+  &:hover {
+    background-color: $gray-alpha;
+  }
+
+  &-link {
+    color: $teal-dark;
+    background: none;
+
+    &:hover {
+      background-color: transparent;
+      color: $teal-dark;
+    }
+  }
+}

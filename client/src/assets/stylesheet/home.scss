@@ -1,5 +1,7 @@
+@import "./variables.scss";
+
 .home {
-  min-height: 100vh;
+  min-height: calc(100vh - #{$navbar} - 6rem);
   &-row {
     @extend .home;
   }
