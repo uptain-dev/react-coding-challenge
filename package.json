@@ -4,10 +4,10 @@
   "description": "A package containing a simple dummy book API, which should be used in the challenge",
   "scripts": {
     "start": "run-p server dev",
-    "server": "json-server --port 3030 --watch api.json",
+    "server": "json-server --port 3010 --watch api.json",
     "dev": "react-scripts start"
   },
-  "proxy": "http://localhost:3030",
+  "proxy": "http://localhost:3010",
   "keywords": [
     "react challenge",
     "tryouts",

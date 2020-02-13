@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import { getBooks, getSubjects } from './services'
+import { getBooks, getSubjects, patchBook } from './services'
 import SubjectSelection from './SubjectSelection'
-import Book from './Book'
 import BooksList from './BooksList'
+import Form from './Form'
 
 export default function App() {
   const [books, setBooks] = useState([])
+  const [selectedBook, setSelectedBook] = useState(null)
+
   const [subjects, setSubjects] = useState([])
   const [selectedSubject, setSelectedSubject] = useState('')
 
@@ -14,7 +16,7 @@ export default function App() {
     getSubjects().then(setSubjects)
   }, [])
 
-  const selectedBooks =
+  const filteredBooks =
     selectedSubject === 'all'
       ? books
       : books.filter(({ subjects }) => subjects.includes(selectedSubject))
@@ -25,7 +27,55 @@ export default function App() {
         setSelectedSubject={setSelectedSubject}
         subjects={subjects}
       />
-      <BooksList books={selectedBooks} />
+      <Form
+        selectedBook={selectedBook}
+        handleChange={handleChange}
+        handleInputArrayChange={handleInputArrayChange}
+        handleCancel={() => setSelectedBook(null)}
+        handleEdit={handleEdit}
+        handleInputAuthorChange={handleInputAuthorChange}
+        handleInputFormatsChange={handleInputFormatsChange}
+      />
+      <BooksList books={filteredBooks} setSelectedBook={setSelectedBook} />
     </>
   )
+  function handleChange({ target }) {
+    const { name, value } = target
+    setSelectedBook({ ...selectedBook, [name]: value })
+  }
+
+  function handleInputArrayChange({ target }) {
+    const { name, value } = target
+    const updatedArray = [...selectedBook[name]]
+    updatedArray[target.dataset.index] = value
+    setSelectedBook({ ...selectedBook, [name]: updatedArray })
+  }
+
+  function handleInputAuthorChange({ target }) {
+    const updatedAuthors = [...selectedBook.authors]
+    const { name, value } = target
+    updatedAuthors[target.dataset.index][name] = value
+    setSelectedBook({ ...selectedBook, authors: updatedAuthors })
+  }
+
+  function handleInputFormatsChange({ target }) {
+    const { name, value } = target
+    setSelectedBook({
+      ...selectedBook,
+      formats: { ...selectedBook.formats, [name]: value },
+    })
+  }
+
+  function handleEdit(event) {
+    event.preventDefault()
+    patchBook(selectedBook).then(updatedBook => {
+      const index = books.findIndex(book => book.id === updatedBook.id)
+      setBooks([
+        ...books.slice(0, index),
+        updatedBook,
+        ...books.slice(index + 1),
+      ])
+      setSelectedBook(null)
+    })
+  }
 }
